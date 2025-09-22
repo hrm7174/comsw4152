@@ -4,6 +4,10 @@ class WordGuesserGame
   attr_accessor :word, :guesses, :wrong_guesses
   # Get a word from remote "random word" service
 
+  def win?  = check_win_or_lose == :win
+
+  def lose? = check_win_or_lose == :lose
+
   def initialize(word)
     @word = word
     @guesses = ''
